@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Девайс</title>
+</head>
+
+<body>
+  <header class="header">
+    <a href="index.html" class="header__logo logo">
+      <img class="logo__img" src="http://placehold.it/150x100" alt="Device">
+    </a>
+    <ul class="menu-shop">
+      <li class="search">
+        <form class="search__form" action="#">
+          <input type="text" class="search__input" placeholder="Поиск по сайту">
+          <button class="search__button" type="submit">Поиск</button>
+        </form>
+      </li>
+      <li class="login">
+        <a href="#" class="login__link">Войти</a>
+      </li>
+      <li class="compare">
+        <a href="#" class="compare__link">Сравнить</a>
+      </li>
+      <li class="cart">
+        <a href="#" class="cart__link">Корзина</a>
+      </li>
+    </ul>
+    <nav class="nav-menu">
+      <ul class="nav-menu__list">
+        <li class="nav-menu__item">
+          <a href="#" class="nav-menu__link">Каталог товаров</a>
+          <ul class="catalog-menu">
+            <li class="catalog-menu__item">
+              <a href="#" class="catalog-menu__link">Виртуальная реальность</a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="#" class="catalog-menu__link">Моноподы для селфи</a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="#" class="catalog-menu__link">Экшн-камеры</a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="#" class="catalog-menu__link">Фитнес-браслеты</a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="#" class="catalog-menu__link">Умные часы</a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="#" class="catalog-menu__link">Квадракоптеры</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-menu__item">
+          <a href="#" class="nav-menu__link">Доставка</a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="#" class="nav-menu__link">Гарантия</a>
+        </li>
+        <li class="nav-menu__item">
+          <a href="#" class="nav-menu__link">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page">
+    <h1 class="page__title">Моноподы для селфи</h1>
+    <div class="breadcrumbs">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a href="/" class="breadcrumbs__link">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a href="#" class="breadcrumbs__link">Каталог товаров</a>
+        <li>
+        <li class="breadcrumbs__item">
+          <a href="#" class="breadcrumbs__link">Моноподы для селфи</a>
+        <li>
+      </ul>
+    </div>
+    <aside class="filter">
+      <p class="filter__name">Фильтр</p>
+      <form class="filter__form" action="#" method="post">
+        <fieldset class="filter__fieldset">
+          <legend class="filter__legend">Стоимость</legend>
+          <input class="input" type="range" min="0" max="10000">
+        </fieldset>
+        <fieldset class="filter__fieldset">
+          <legend class="filter__legend">Цвет</legend>
+          <ul class="filter__list">
+            <li class="filter__item checkbox">
+              <label class="checkbox__label" for="filter-color-black"></label>
+              <input id="filter-color-black" class="checkbox__input" type="checkbox" name="color-filter" value="black" checked>Черный
+            </li>
+            <li class="filter__item checkbox">
+              <label class="checkbox__label" for="filter-color-white"></label>
+              <input id="filter-color-white" class="checkbox__input" type="checkbox" name="color-filter" value="white">Белый
+            </li>
+            <li class="filter__item checkbox">
+              <label class="checkbox__label" for="filter-color-blue"></label>
+              <input id="filter-color-blue" class="checkbox__input" type="checkbox" name="color-filter" value="blue" checked>Синий
+            </li>
+            <li class="filter__item checkbox">
+              <label class="checkbox__label" for="filter-color-red"></label>
+              <input id="filter-color-red" class="checkbox__input" type="checkbox" name="color-filter" value="red" checked>Красный
+            </li>
+            <li class="filter__item checkbox">
+              <label class="checkbox__label" for="filter-color-ping"></label>
+              <input id="filter-color-ping" class="checkbox__input" type="checkbox" name="color-filter" value="pink">Розовый
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter__fieldset">
+          <legend class="filter__legend">Bluetooth</legend>
+          <ul class="filter__list">
+            <li class="filter__item radio">
+              <label class="radio__label" for="available-bluetooth-true"></label>
+              <input id="available-bluetooth-true" class="radio__input" type="radio" name="available-bluetooth" value="yes" checked>Есть
+            </li>
+            <li class="filter__item radio">
+              <label class="radio__label" for="available-bluetooth-false"></label>
+              <input id="available-bluetooth-false" class="radio__input" type="radio" name="available-bluetooth" value="no">Нет
+            </li>
+          </ul>
+        </fieldset>
+        <button class="button filter__button" type="submit">Показать</button>
+      </form>
+    </aside>
+    <section class="category">
+      <div class="sorting-category">
+        <p class="sorting-category__name">Сортировка:</p>
+        <ul class="sorting-category__list">
+          <li class="sorting-category__item sorting-category__item--active">
+            <a href="#" class="sorting-category__link">По цене</a>
+          </li>
+          <li class="sorting-category__item">
+            <a href="#" class="sorting-category__link">По типу</a>
+          </li>
+          <li class="sorting-category__item">
+            <a href="#" class="sorting-category__link">По популярности</a>
+          </li>
+        </ul>
+        <div class="sorting-priority">
+          <a href="#" class="sorting-priority__link sorting-priority__link--increase"></a>
+          <a href="#" class="sorting-priority__link sorting-priority__link--decrease"></a>
+        </div>
+      </div>
+      <ul class="category__list">
+        <li class="category__item">
+          <img class="category__img" src="http://placehold.it/150x100" alt="Любительская селфи-палка">
+          <a class="category__link" href="#">Любительская селфи-палка</a>
+          <p class="category__price">500 руб.</p>
+          <div class="category-links">
+            <a class="button button--add-cart" href="#">В корзину</a>
+            <a class="category-links__compare" href="#">Добавить к сравнению</a>
+          </div>
+        </li>
+        <li class="category__item">
+          <img class="category__img" src="http://placehold.it/150x100" alt="Профессиональная селфи-палка">
+          <a class="category__link" href="#">Профессиональная селфи-палка</a>
+          <p class="category__price">1 500 руб.</p>
+          <div class="category-links">
+            <a class="button button--add-cart" href="#">В корзину</a>
+            <a class="category-links__compare" href="#">Добавить к сравнению</a>
+          </div>
+        </li>
+        <li class="category__item">
+          <img class="category__img" src="http://placehold.it/150x100" alt="Непотопляемая селфи-палка">
+          <a class="category__link" href="#">Непотопляемая селфи-палка</a>
+          <p class="category__price">2 500 руб.</p>
+          <div class="category-links">
+            <a class="button button--add-cart" href="#">В корзину</a>
+            <a class="category-links__compare" href="#">Добавить к сравнению</a>
+          </div>
+        </li>
+        <li class="category__item category__item--new">
+          <img class="category__img" src="http://placehold.it/150x100" alt="Селфи-палка «Следуй за мной»">
+          <a class="category__link" href="#">Селфи-палка «Следуй за мной»</a>
+          <p class="category__price">4 900 руб.</p>
+          <div class="category-links">
+            <a class="button button--add-cart" href="#">В корзину</a>
+            <a class="category-links__compare" href="#">Добавить к сравнению</a>
+          </div>
+        </li>
+      </ul>
+      <div class="pagination">
+        <ul class="pagination__list">
+          <li class="pagination__item">
+            <a href="#" class="pagination__link">Назад</a>
+          </li>
+          <li class="pagination__item pagination__item--current">
+            <a href="#" class="pagination__link">1</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#" class="pagination__link">2</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#" class="pagination__link">3</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#" class="pagination__link">Вперед</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <a href="index.html" class="logo footer__logo">
+        <img class="logo__img logo__img--footer" src="http://placehold.it/150x100" alt="Device">
+      </a>
+      <p class="footer__address">г. Москва, ул. Строителей, 15</p>
+      <div class="footer-nav">
+        <ul class="footer-nav__list">
+          <li class="footer-nav__item">
+            <a href="#" class="footer-nav__link">Доставка</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="#" class="footer-nav__link">Гарантия</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="#" class="footer-nav__link">Контакты</a>
+          </li>
+        </ul>
+      </div>
+      <div class="social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a href="#" class="social__link">Facebook</a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link">Instagram</a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link">Twitter</a>
+          </li>
+        </ul>
+      </div>
+      <ul class="footer__additional-menu">
+        <li class="login login--footer">
+          <a href="#" class="login__link">Войти</a>
+        </li>
+        <li class="compare compare--footer">
+          <a href="#" class="compare__link">Сравнить</a>
+        </li>
+        <li class="cart cart--foter">
+          <a href="#" class="cart__link"></a>
+        </li>
+      </ul>
+      <a href="tel:84954959595" class="footer__phone">Тел.: +7 (495) 495-95-95</a>
+      <p class="copyright">
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="copyright__link" target="_blank">HTML Academy</a>
+      </p>
+    </div>
+  </footer>
+  <section class="map">
+    <button class="button button--close" type="button"></button>
+    <h2 class="map__title visually-hidden">Карта</h2>
+    <img class="map__img" src="http://placehold.it/150x100" alt="Наш офис на карте">
+  </section>
+  <section class="write-us">
+    <button class="button button--close" type="button"></button>
+    <h2 class="write-us__title visually-hidden">Написать нам</h2>
+    <form action="#" class="write-us__form" method="post">
+      <fieldset class="fieldset">
+        <div class="form-field">
+          <label class="form-field__label" for="name">Ваше имя</label>
+          <input id="name" class="form-field__input" type="text" placeholder="Имя фамилия" name="name">
+        </div>
+        <div class="form-field">
+          <label class="form-field__label" for="email">Ваш e-mail</label>
+          <input id="email" class="form-field__input" type="text" placeholder="email@example.com" name="email">
+        </div>
+        <div class="form-field">
+          <label class="form-field__label" for="message">Текст письма</label>
+          <textarea id="message" class="form-field__textarea" placeholder="В свободной форме"  name="message">
+          </textarea>
+        </div>
+        <button class="button button--submit" type="submit">Отправить</button>
+      </fieldset>
+    </form>
+  </section>
+</body>
+
+</html>
