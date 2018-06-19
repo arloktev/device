@@ -13,8 +13,8 @@
     </a>
     <ul class="menu-shop">
       <li class="search">
-        <form class="search__form" action="#">
-          <input type="text" class="search__input" placeholder="Поиск по сайту">
+        <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
+          <input class="search__input" type="text" name="search" placeholder="Поиск по сайту">
           <button class="search__button" type="submit">Поиск</button>
         </form>
       </li>
@@ -37,7 +37,7 @@
               <a href="#" class="catalog-menu__link">Виртуальная реальность</a>
             </li>
             <li class="catalog-menu__item">
-              <a href="#" class="catalog-menu__link">Моноподы для селфи</a>
+              <a href="catalog.html" class="catalog-menu__link">Моноподы для селфи</a>
             </li>
             <li class="catalog-menu__item">
               <a href="#" class="catalog-menu__link">Экшн-камеры</a>
@@ -70,12 +70,12 @@
     <section class="main-slider">
       <h2 class="main-slider__title visually-hidden">Рекомендуемые товары</h2>
       <div class="slide-navigation">
-        <label class="slide-navigation__label" for="slide-control-1"></label>
-        <input id="slide-control-1" class="control slide-navigation__control" type="radio" checked>
-        <label class="slide-navigation__label" for="slide-control-2"></label>
-        <input id="slide-control-2" class="control slide-navigation__control" type="radio">
-        <label class="slide-navigation__label" for="slide-control-3"></label>
-        <input id="slide-control-3" class="control slide-navigation__control" type="radio">
+        <label class="slide-navigation__label" for="slide-control-1">Первый слайд</label>
+        <input id="slide-control-1" class="control slide-navigation__control" type="radio" name="slide-control" checked>
+        <label class="slide-navigation__label" for="slide-control-2">Второй слайд</label>
+        <input id="slide-control-2" class="control slide-navigation__control" type="radio" name="slide-control">
+        <label class="slide-navigation__label" for="slide-control-3">Третий слайд</label>
+        <input id="slide-control-3" class="control slide-navigation__control" type="radio" name="slide-control">
       </div>
       <ul class="main-slider__list">
         <li class="main-slider__item featured-product">
@@ -136,28 +136,40 @@
       <h2 class="home-catalog__title visually-hidden">Каталог товаров</h2>
       <ul class="home-catalog__list">
         <li class="home-catalog__item">
-          <img class="home-catalog__img" src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
-          <a href="#" class="home-catalog__link">Виртуальная реальность</a>
+          <a href="#" class="home-catalog__link">
+            <img class="home-catalog__img" src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
+            <p class="home-catalog__name">Виртуальная реальность</p>
+          </a>
         </li>
         <li class="home-catalog__item">
-          <img class="home-catalog__img" src="img/popular-2.svg" width="86" height="117" alt="Моноподы для селфи">
-          <a href="#" class="home-catalog__link">Моноподы для селфи</a>
+          <a href="catalog.html" class="home-catalog__link">
+            <img class="home-catalog__img" src="img/popular-2.svg" width="86" height="117" alt="Моноподы для селфи">
+            <p class="home-catalog__name">Моноподы для селфи</p>
+          </a>
         </li>
         <li class="home-catalog__item">
-          <img class="home-catalog__img" src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры">
-          <a href="#" class="home-catalog__link">Экшн-камеры</a>
+          <a href="#" class="home-catalog__link">
+            <img class="home-catalog__img" src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры">
+            <p class="home-catalog__name">Экшн-камеры</p>
+          </a>
         </li>
         <li class="home-catalog__item">
-          <img class="home-catalog__img" src="img/popular-4.svg" width="107" height="65" alt="Фитнес-браслеты">
-          <a href="#" class="home-catalog__link">Фитнес-браслеты</a>
+          <a href="#" class="home-catalog__link">
+            <img class="home-catalog__img" src="img/popular-4.svg" width="107" height="65" alt="Фитнес-браслеты">
+            <p class="home-catalog__name">Фитнес-браслеты</p>
+          </a>
         </li>
         <li class="home-catalog__item">
-          <img class="home-catalog__img" src="img/popular-5.svg" width="56" height="98" alt="Умные часы">
-          <a href="#" class="home-catalog__link">Умные часы</a>
+          <a href="#" class="home-catalog__link">
+            <img class="home-catalog__img" src="img/popular-5.svg" width="56" height="98" alt="Умные часы">
+            <p class="home-catalog__name">Умные часы</p>
+          </a>
         </li>
         <li class="home-catalog__item">
-          <img class="home-catalog__img" src="img/popular-6.svg" width="132" height="69" alt="Квадрокоптеры">
-          <a href="#" class="home-catalog__link">Квадрокоптеры</a>
+          <a href="#" class="home-catalog__link">
+            <img class="home-catalog__img" src="img/popular-6.svg" width="132" height="69" alt="Квадрокоптеры">
+            <p class="home-catalog__name">Квадрокоптеры</p>
+          </a>
         </li>
       </ul>
     </section>
@@ -254,7 +266,7 @@
           <a href="#" class="compare__link">Сравнить</a>
         </li>
         <li class="cart cart--foter">
-          <a href="#" class="cart__link"></a>
+          <a href="#" class="cart__link">Корзина</a>
         </li>
       </ul>
       <a href="tel:84954959595" class="footer__phone">Тел.: +7 (495) 495-95-95</a>
@@ -264,14 +276,14 @@
     </div>
   </footer>
   <section class="map">
-    <button class="button button--close" type="button"></button>
+    <button class="button button--close" type="button">Закрыть всплывающее окно</button>
     <h2 class="map__title visually-hidden">Карта</h2>
     <img class="map__img" src="img/map-big.jpg" width="960" height="559" alt="Наш офис на карте">
   </section>
   <section class="write-us">
-    <button class="button button--close" type="button"></button>
+    <button class="button button--close" type="button">Закрыть всплывающее окно</button>
     <h2 class="write-us__title visually-hidden">Написать нам</h2>
-    <form action="#" class="write-us__form" method="post">
+    <form action="https://echo.htmlacademy.ru" class="write-us__form" method="post">
       <fieldset class="fieldset">
         <div class="form-field">
           <label class="form-field__label" for="name">Ваше имя</label>
@@ -279,12 +291,11 @@
         </div>
         <div class="form-field">
           <label class="form-field__label" for="email">Ваш e-mail</label>
-          <input id="email" class="form-field__input" type="text" placeholder="email@example.com" name="email">
+          <input id="email" class="form-field__input" type="email" placeholder="email@example.com" name="email">
         </div>
         <div class="form-field">
           <label class="form-field__label" for="message">Текст письма</label>
-          <textarea id="message" class="form-field__textarea" placeholder="В свободной форме"  name="message">
-          </textarea>
+          <textarea id="message" class="form-field__textarea" placeholder="В свободной форме" name="message"></textarea>
         </div>
         <button class="button button--submit" type="submit">Отправить</button>
       </fieldset>

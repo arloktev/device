@@ -13,8 +13,8 @@
     </a>
     <ul class="menu-shop">
       <li class="search">
-        <form class="search__form" action="#">
-          <input type="text" class="search__input" placeholder="Поиск по сайту">
+        <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
+          <input class="search__input" type="text" name="search" placeholder="Поиск по сайту">
           <button class="search__button" type="submit">Поиск</button>
         </form>
       </li>
@@ -74,41 +74,46 @@
         </li>
         <li class="breadcrumbs__item">
           <a href="#" class="breadcrumbs__link">Каталог товаров</a>
-        <li>
+        </li>
         <li class="breadcrumbs__item">
-          <a href="#" class="breadcrumbs__link">Моноподы для селфи</a>
-        <li>
+          <a class="breadcrumbs__link">Моноподы для селфи</a>
+        </li>
       </ul>
     </div>
     <aside class="filter">
       <p class="filter__name">Фильтр</p>
-      <form class="filter__form" action="#" method="post">
+      <form class="filter__form" action="https://echo.htmlacademy.ru" method="get">
         <fieldset class="filter__fieldset">
           <legend class="filter__legend">Стоимость</legend>
-          <input class="input" type="range" min="0" max="10000">
+          <input class="input" type="range" name="price-filter" min="0" max="10000" step="1000">
         </fieldset>
         <fieldset class="filter__fieldset">
           <legend class="filter__legend">Цвет</legend>
           <ul class="filter__list">
             <li class="filter__item checkbox">
-              <label class="checkbox__label" for="filter-color-black"></label>
-              <input id="filter-color-black" class="checkbox__input" type="checkbox" name="color-filter" value="black" checked>Черный
+              <label class="checkbox__label" for="filter-color-black">
+                <input id="filter-color-black" class="checkbox__input" type="checkbox" name="color-filter" value="black" checked>Черный
+              </label>
             </li>
             <li class="filter__item checkbox">
-              <label class="checkbox__label" for="filter-color-white"></label>
-              <input id="filter-color-white" class="checkbox__input" type="checkbox" name="color-filter" value="white">Белый
+              <label class="checkbox__label" for="filter-color-white">
+                <input id="filter-color-white" class="checkbox__input" type="checkbox" name="color-filter" value="white">Белый
+              </label>
             </li>
             <li class="filter__item checkbox">
-              <label class="checkbox__label" for="filter-color-blue"></label>
-              <input id="filter-color-blue" class="checkbox__input" type="checkbox" name="color-filter" value="blue" checked>Синий
+              <label class="checkbox__label" for="filter-color-blue">
+                <input id="filter-color-blue" class="checkbox__input" type="checkbox" name="color-filter" value="blue" checked>Синий
+              </label>
             </li>
             <li class="filter__item checkbox">
-              <label class="checkbox__label" for="filter-color-red"></label>
-              <input id="filter-color-red" class="checkbox__input" type="checkbox" name="color-filter" value="red" checked>Красный
+              <label class="checkbox__label" for="filter-color-red">
+                <input id="filter-color-red" class="checkbox__input" type="checkbox" name="color-filter" value="red" checked>Красный
+              </label>
             </li>
             <li class="filter__item checkbox">
-              <label class="checkbox__label" for="filter-color-ping"></label>
-              <input id="filter-color-ping" class="checkbox__input" type="checkbox" name="color-filter" value="pink">Розовый
+              <label class="checkbox__label" for="filter-color-ping">
+                <input id="filter-color-ping" class="checkbox__input" type="checkbox" name="color-filter" value="pink">Розовый
+              </label>
             </li>
           </ul>
         </fieldset>
@@ -116,12 +121,14 @@
           <legend class="filter__legend">Bluetooth</legend>
           <ul class="filter__list">
             <li class="filter__item radio">
-              <label class="radio__label" for="available-bluetooth-true"></label>
-              <input id="available-bluetooth-true" class="radio__input" type="radio" name="available-bluetooth" value="yes" checked>Есть
+              <label class="radio__label" for="available-bluetooth-true">
+                <input id="available-bluetooth-true" class="radio__input" type="radio" name="available-bluetooth" value="yes" checked>Есть
+              </label>
             </li>
             <li class="filter__item radio">
-              <label class="radio__label" for="available-bluetooth-false"></label>
-              <input id="available-bluetooth-false" class="radio__input" type="radio" name="available-bluetooth" value="no">Нет
+              <label class="radio__label" for="available-bluetooth-false">
+                <input id="available-bluetooth-false" class="radio__input" type="radio" name="available-bluetooth" value="no">Нет
+              </label>
             </li>
           </ul>
         </fieldset>
@@ -143,8 +150,8 @@
           </li>
         </ul>
         <div class="sorting-priority">
-          <a href="#" class="sorting-priority__link sorting-priority__link--increase"></a>
-          <a href="#" class="sorting-priority__link sorting-priority__link--decrease"></a>
+          <a href="#" class="sorting-priority__link sorting-priority__link--increase">По возрастанию</a>
+          <a href="#" class="sorting-priority__link sorting-priority__link--decrease">По убыванию</a>
         </div>
       </div>
       <ul class="category__list">
@@ -246,7 +253,7 @@
           <a href="#" class="compare__link">Сравнить</a>
         </li>
         <li class="cart cart--foter">
-          <a href="#" class="cart__link"></a>
+          <a href="#" class="cart__link">Корзина</a>
         </li>
       </ul>
       <a href="tel:84954959595" class="footer__phone">Тел.: +7 (495) 495-95-95</a>
@@ -256,14 +263,14 @@
     </div>
   </footer>
   <section class="map">
-    <button class="button button--close" type="button"></button>
+    <button class="button button--close" type="button">Закрыть всплывающее окно</button>
     <h2 class="map__title visually-hidden">Карта</h2>
     <img class="map__img" src="img/map-big.jpg" width="960" height="559" alt="Наш офис на карте">
   </section>
   <section class="write-us">
-    <button class="button button--close" type="button"></button>
+    <button class="button button--close" type="button">Закрыть всплывающее окно</button>
     <h2 class="write-us__title visually-hidden">Написать нам</h2>
-    <form action="#" class="write-us__form" method="post">
+    <form action="https://echo.htmlacademy.ru" class="write-us__form" method="post">
       <fieldset class="fieldset">
         <div class="form-field">
           <label class="form-field__label" for="name">Ваше имя</label>
@@ -275,8 +282,7 @@
         </div>
         <div class="form-field">
           <label class="form-field__label" for="message">Текст письма</label>
-          <textarea id="message" class="form-field__textarea" placeholder="В свободной форме"  name="message">
-          </textarea>
+          <textarea id="message" class="form-field__textarea" placeholder="В свободной форме" name="message"></textarea>
         </div>
         <button class="button button--submit" type="submit">Отправить</button>
       </fieldset>
