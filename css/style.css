@@ -1,0 +1,481 @@
+@font-face {
+  font-display: swap;
+  font-family: "Open Sans";
+  src: local("Open Sans Light"), local("OpenSans-Light"),
+  url("../fonts/opensanslight.woff") format("woff"),
+  url("../fonts/opensanslight.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Open Sans";
+  src: local("Open Sans Regular"), local("OpenSans-Regular"),
+  url("../fonts/opensans.woff") format("woff"),
+  url("../fonts/opensans.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Gilroy";
+  src: local("Gilroy Light"), local("Gilroy-Light"),
+  url("../fonts/gilroylight.woff") format("woff"),
+  url("../fonts/gilroylight.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Gilroy";
+  src: local("Gilroy ExtraBold"), local("Gilroy-ExtraBold"),
+  url("../fonts/gilroyextrabold.woff") format("woff"),
+  url("../fonts/gilroyextrabold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.page {
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+a:focus {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.input,
+.textarea,
+.button {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 30px;
+  border: none;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+
+.header {
+  background-color: #f7e296;
+}
+
+.logo:hover {
+  opacity: 0.6;
+}
+
+.logo:focus {
+  opacity: 0.3;
+}
+
+.search__input {
+  background-color: transparent;
+  letter-spacing: 0.15px;
+}
+
+.search__input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search__button {
+  background: transparent;
+  box-shadow: inset 0 0 0 2px black;
+  opacity: 0;
+}
+
+.search__button:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.search__input:focus {
+  box-shadow: inset 0 -2px 0 0 black;
+}
+
+.search__form:focus-within .search__button {
+  opacity: 1;
+}
+
+.search__button:focus {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.login__link,
+.compare__link,
+.cart__link {
+  letter-spacing: 0.15px;
+}
+
+.nav-menu__link {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+}
+
+.catalog-menu__link {
+  line-height: 36px;
+  letter-spacing: 0.15px;
+}
+
+.featured-product__title {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 47px;
+  font-weight: 800;
+  line-height: 56px;
+  letter-spacing: 0.47px;
+}
+
+.featured-product__description {
+  color: #464646;
+  line-height: 36px;
+  letter-spacing: 0.15px;
+}
+
+.featured-product__link {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+}
+
+.product-characteristics__value {
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.36px;
+}
+
+.product-characteristics__name {
+  color: #464646;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.13px;
+}
+
+.home-catalog__link {
+  background-color: #f7e296;
+}
+
+.home-catalog__link:hover {
+  background-color: #f0c52e;
+}
+
+.home-catalog__link:focus {
+  background-color: #f0c52e;
+}
+
+.home-catalog__link:focus .home-catalog__img,
+.home-catalog__link:focus .home-catalog__name {
+  opacity: 0.3;
+}
+
+.home-catalog__name {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+}
+
+.home-services {
+  background-color: #e5e5e5;
+}
+
+.tabs__item {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+}
+
+.tabs__item--active {
+  color: #f7e184;
+}
+
+.features__title,
+.about-us__title,
+.contacts__title {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 47px;
+  font-weight: 800;
+  line-height: 48px;
+  letter-spacing: 0.47px;
+}
+
+.features__text,
+.about-us__text,
+.contacts__text {
+  color: #464646;
+  letter-spacing: 0.3px;
+}
+
+.transport-companies__item {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 40px;
+}
+
+.button {
+  color: black;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.page__title {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 47px;
+  font-weight: 800;
+  line-height: 48px;
+  letter-spacing: 0.47px;
+}
+
+.breadcrumbs__link {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+}
+
+.breadcrumbs__link:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs__link:focus {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.filter {
+  background-color: #efefef;
+}
+
+.filter__name,
+.sorting-category__name {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+}
+
+.filter__name {
+  background-color: #dbdbdb;
+}
+
+.filter__legend {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 0.18px;
+}
+
+.sorting-category {
+  background-color: #ebebeb;
+}
+
+.sorting-category__link {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.sorting-category__link:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.sorting-category__link:focus,
+.sorting-category__item--active .sorting-category__link {
+  color: black;
+}
+
+.category__item:hover .category__img {
+  opacity: 0.7;
+}
+
+.category__link {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 0.18px;
+}
+
+.category__price {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+}
+
+.pagination {
+  background-color: #ebebeb;
+}
+
+.pagination__link {
+  color: rgba(0, 0, 0, 0.3);
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+}
+
+.pagination__link:hover {
+  color: black;
+}
+
+.pagination__link--back,
+.pagination__link--next,
+.pagination__link--current {
+  color: black;
+}
+
+.pagination__link--back:hover,
+.pagination__link--next:hover {
+  color: black;
+  background-color: #d9d9d9;
+}
+
+.pagination__link--back:focus,
+.pagination__link--next:focus {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #d9d9d9;
+}
+
+.footer {
+  color: white;
+  background-color: #464646;
+}
+
+.footer__address {
+  color: white;
+  letter-spacing: 0.3px;
+}
+
+.footer-nav__link {
+  color: white;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+}
+
+.footer-nav__link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-nav__link:focus {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.social__link {
+  background-color: #7e7e7e;
+}
+
+.social__link:hover {
+  background-color: #b5b5b5;
+}
+
+.social__link:focus {
+  background-color: #595959;
+}
+
+.footer__phone {
+  color: white;
+}
+
+.login__link--footer,
+.compare__link--footer,
+.cart__link--foter {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 36px;
+}
+
+.login__link--footer:hover,
+.compare__link--footer:hover,
+.cart__link--foter:hover {
+  color: white;
+}
+
+.login__link--footer:focus,
+.compare__link--footer:focus,
+.cart__link--foter:focus {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button--close {
+  background-color: #f7e296;
+}
+
+.button--close:hover {
+  background-color: #f0c52e;
+}
+
+.button--close:focus {
+  background-color: #faedc0;
+}
+
+.form-field__input,
+.form-field__textarea {
+  background-color: #f2f2f2;
+}
+
+.form-field__input:hover,
+.form-field__textarea:hover {
+  background-color: #eaeaea;
+}
+
+.form-field__input:focus,
+.form-field__textarea:focus {
+  background-color: white;
+  box-shadow: inset 0 0 0 3px #f0c52e;
+}

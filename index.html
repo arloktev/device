@@ -4,9 +4,11 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="page">
   <header class="header">
     <a class="header__logo logo">
       <img class="logo__img" src="img/logo.png" width="163" height="36" alt="Device">
@@ -14,8 +16,8 @@
     <ul class="menu-shop">
       <li class="search">
         <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
-          <input class="search__input" type="text" name="search" placeholder="Поиск по сайту">
-          <button class="search__button" type="submit">Поиск</button>
+          <input class="input search__input" type="text" name="search" placeholder="Поиск по сайту">
+          <button class="button search__button" type="submit">Найти</button>
         </form>
       </li>
       <li class="login">
@@ -177,7 +179,7 @@
       <h2 class="home-services__title visually-hidden">Услуги магазина</h2>
       <div class="tabs">
         <ul class="tabs__list">
-          <li class="tabs__item">Доставка</li>
+          <li class="tabs__item tabs__item--active">Доставка</li>
           <li class="tabs__item">Гарантия</li>
           <li class="tabs__item">Кредит</li>
         </ul>
@@ -260,13 +262,13 @@
       </div>
       <ul class="footer__additional-menu">
         <li class="login login--footer">
-          <a href="#" class="login__link">Войти</a>
+          <a href="#" class="login__link login__link--footer">Войти</a>
         </li>
         <li class="compare compare--footer">
-          <a href="#" class="compare__link">Сравнить</a>
+          <a href="#" class="compare__link login__link--footer">Сравнить</a>
         </li>
         <li class="cart cart--foter">
-          <a href="#" class="cart__link">Корзина</a>
+          <a href="#" class="cart__link login__link--footer">Корзина</a>
         </li>
       </ul>
       <a href="tel:84954959595" class="footer__phone">Тел.: +7 (495) 495-95-95</a>
@@ -287,15 +289,15 @@
       <fieldset class="fieldset">
         <div class="form-field">
           <label class="form-field__label" for="name">Ваше имя</label>
-          <input id="name" class="form-field__input" type="text" placeholder="Имя фамилия" name="name">
+          <input id="name" class="input form-field__input" type="text" placeholder="Имя фамилия" name="name">
         </div>
         <div class="form-field">
           <label class="form-field__label" for="email">Ваш e-mail</label>
-          <input id="email" class="form-field__input" type="email" placeholder="email@example.com" name="email">
+          <input id="email" class="input form-field__input" type="email" placeholder="email@example.com" name="email">
         </div>
         <div class="form-field">
           <label class="form-field__label" for="message">Текст письма</label>
-          <textarea id="message" class="form-field__textarea" placeholder="В свободной форме" name="message"></textarea>
+          <textarea id="message" class="textarea form-field__textarea" placeholder="В свободной форме" name="message"></textarea>
         </div>
         <button class="button button--submit" type="submit">Отправить</button>
       </fieldset>
