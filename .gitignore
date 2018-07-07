@@ -11,3 +11,4 @@ npm-debug.*
 Thumbs.db
 .csscomb.json
 .postcss-sorting.json
+.browserslistrc

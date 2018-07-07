@@ -3,8 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/gilroylight.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/gilroyextrabold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link href="css/normalize.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page">
     <header class="header container">
@@ -12,24 +16,24 @@
       <div class="menu-shop">
         <div class="search">
           <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
-            <input class="input search__input" type="text" name="search" placeholder="Поиск по сайту">
+            <input class="input search__input" type="search" name="search" placeholder="Поиск по сайту" autocomplete="off">
             <button class="button search__button" type="submit">Найти</button>
           </form>
         </div>
         <ul class="nav-user list-unstyled">
           <li class="nav-user__login">
-            <a href="#" class="nav-user__link">Валентин Петухов</a>
+            <a href="#" class="nav-user__link nav-user__link--login">Валентин Петухов</a>
           </li>
           <li class="nav-user__logout">
-            <a href="#" class="nav-user__link">Выйти</a>
+            <a href="#" class="nav-user__link nav-user__link--logout">Выйти</a>
           </li>
         </ul>
         <ul class="nav-order list-unstyled">
           <li class="nav-order__compare">
-            <a href="#" class="nav-order__link">Сравнить</a>
+            <a href="#" class="nav-order__link nav-order__link--compare">Сравнить</a>
           </li>
           <li class="nav-order__cart">
-            <a href="#" class="nav-order__link">Корзина</a>
+            <a href="#" class="nav-order__link nav-order__link--cart">Корзина</a>
           </li>
         </ul>
       </div>
@@ -100,6 +104,23 @@
             <form class="filter__form" action="https://echo.htmlacademy.ru" method="get">
               <fieldset class="fieldset filter__fieldset">
                 <legend class="filter__legend filter__legend--price">Стоимость</legend>
+                <div class="filter__price filter-price">
+                  <div class="filter-price__range-controls range-controls">
+                    <div class="range-controls__scale">
+                      <div class="range-controls__bar"></div>
+                    </div>
+                    <div class="range-controls__toggle range-controls__toggle--min"></div>
+                    <div class="range-controls__toggle range-controls__toggle--max"></div>
+                  </div>
+                  <div class="filter-price__price-controls price-controls">
+                    <label class="price-controls__label price-controls__label--min-price">
+                      от <input class="price-controls__input" name="min-price" type="text" value="0">
+                    </label>
+                    <label class="price-controls__label price-controls__label--max-price">
+                      до <input class="price-controls__input" name="max-price" type="text" value="5000">
+                    </label>
+                  </div>
+                </div>
               </fieldset>
               <fieldset class="fieldset filter__fieldset">
                 <legend class="filter__legend filter__legend--color">Цвет</legend>
@@ -157,8 +178,8 @@
                 </li>
               </ul>
               <div class="sorting-priority">
-                <a href="#" class="sorting-priority__link sorting-priority__link--increase"><span class="visually-hidden">По возрастанию</span></a>
-                <a href="#" class="sorting-priority__link sorting-priority__link--decrease"><span class="visually-hidden">По убыванию</span></a>
+                <a href="#" class="sorting-priority__link sorting-priority__link--increase" title="По возрастанию"><span class="visually-hidden">По возрастанию</span></a>
+                <a href="#" class="sorting-priority__link sorting-priority__link--decrease sorting-priority__link--current" title="По убыванию"><span class="visually-hidden">По убыванию</span></a>
               </div>
             </div>
             <ul class="products__list list-unstyled">
@@ -176,7 +197,7 @@
               <li class="products__item product-item">
                 <img class="product-item__img" src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
                 <div class="product-item__info">
-                  <a class="product-item__link" href="#">Профессиональная селфи-палка&nbsp;</a>
+                  <a class="product-item__link" href="#">Профессиональная селфи-&nbsp;палка</a>
                   <p class="product-item__price">1 500 руб.</p>
                 </div>
                 <div class="product-item__links links">
@@ -230,21 +251,20 @@
       <div class="container">
         <div class="footer__top">
           <a href="index.html" class="logo footer__logo">Device</a>
-          <ul class="nav-user nav-user--footer
-            list-unstyled">
+          <ul class="nav-user nav-user--footer list-unstyled">
             <li class="nav-user__login">
-              <a href="#" class="nav-user__link nav-user__link--footer">Валентин Петухов</a>
+              <a href="#" class="nav-user__link nav-user__link--login nav-user__link--footer-login">Валентин Петухов</a>
             </li>
             <li class="nav-user__logout">
-              <a href="#" class="nav-user__link nav-user__link--footer">Выйти</a>
+              <a href="#" class="nav-user__link nav-user__link--logout nav-user__link--footer">Выйти</a>
             </li>
           </ul>
-          <ul class="nav-order list-unstyled">
+          <ul class="nav-order nav-order--footer list-unstyled">
             <li class="nav-order__compare">
-              <a href="#" class="nav-order__link nav-order__link--footer">Сравнить</a>
+              <a href="#" class="nav-order__link nav-order__link--compare nav-order__link--footer-compare">Сравнить</a>
             </li>
-            <li class="nav-order__cart">
-              <a href="#" class="nav-order__link nav-order__link--footer">Корзина</a>
+            <li class="nav-order__cart nav-order__cart--footer">
+              <a href="#" class="nav-order__link nav-order__link--cart nav-order__link--footer-cart">Корзина</a>
             </li>
           </ul>
         </div>
@@ -285,31 +305,5 @@
         </div>
       </div>
     </footer>
-    <section class="map">
-      <button class="button button--close" type="button"><span class="visually-hidden">Закрыть всплывающее окно</span></button>
-      <h2 class="map__title visually-hidden">Карта</h2>
-      <img class="map__img" src="img/map-big.jpg" width="960" height="559" alt="Наш офис на карте">
-    </section>
-    <section class="write-us">
-      <button class="button button--close" type="button"><span class="visually-hidden">Закрыть всплывающее окно</span></button>
-      <h2 class="write-us__title visually-hidden">Написать нам</h2>
-      <form action="https://echo.htmlacademy.ru" class="write-us__form" method="post">
-        <fieldset class="fieldset">
-          <div class="form-field">
-            <label class="form-field__label" for="name">Ваше имя</label>
-            <input id="name" class="input form-field__input" type="text" placeholder="Имя фамилия" name="name">
-          </div>
-          <div class="form-field">
-            <label class="form-field__label" for="email">Ваш e-mail</label>
-            <input id="email" class="input form-field__input" type="text" placeholder="email@example.com" name="email">
-          </div>
-          <div class="form-field">
-            <label class="form-field__label" for="message">Текст письма</label>
-            <textarea id="message" class="input form-field__textarea" placeholder="В свободной форме" name="message"></textarea>
-          </div>
-          <button class="button button--submit" type="submit">Отправить</button>
-        </fieldset>
-      </form>
-    </section>
   </body>
 </html>
