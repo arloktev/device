@@ -2035,6 +2035,7 @@ a:active {
 
 .map__iframe {
   position: relative;
+  border: none;
   z-index: 2;
 }
 
