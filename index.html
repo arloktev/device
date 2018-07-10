@@ -7,7 +7,6 @@
     <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/gilroylight.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/gilroyextrabold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link href="css/normalize.min.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page">
@@ -86,13 +85,13 @@
           <input id="slide-control-2" class="control slide-navigation__control slide-navigation__control--fitness-bracelet visually-hidden" type="radio" name="slide-control">
           <input id="slide-control-3" class="control slide-navigation__control slide-navigation__control--quadrupter visually-hidden" type="radio" name="slide-control">
           <div class="slide-navigation">
-            <label class="slide-navigation__label slide-navigation__label--self-stick" for="slide-control-1">
+            <label class="slide-navigation__label slide-navigation__label--self-stick" for="slide-control-1" tabindex="0">
               <span class="visually-hidden">Первый слайд</span>
             </label>
-            <label class="slide-navigation__label slide-navigation__label--fitness-bracelet" for="slide-control-2">
+            <label class="slide-navigation__label slide-navigation__label--fitness-bracelet" for="slide-control-2" tabindex="0">
               <span class="visually-hidden">Второй слайд</span>
             </label>
-            <label class="slide-navigation__label slide-navigation__label--quadrupter" for="slide-control-3">
+            <label class="slide-navigation__label slide-navigation__label--quadrupter" for="slide-control-3" tabindex="0">
               <span class="visually-hidden">Третий слайд</span>
             </label>
           </div>
@@ -216,13 +215,13 @@
           <div class="tabs">
             <ul class="tabs__list list-unstyled">
               <li class="tabs__item tabs__item--delivery">
-                <label class="tabs__button tabs__button--delivery button button--primary" for="tab-control-1">Доставка</label>
+                <label class="tabs__button tabs__button--delivery button button--primary" for="tab-control-1" tabindex="0">Доставка</label>
               </li>
               <li class="tabs__item tabs__item--warranty">
-                <label class="tabs__button tabs__button--warranty button button--primary" for="tab-control-2">Гарантия</label>
+                <label class="tabs__button tabs__button--warranty button button--primary" for="tab-control-2" tabindex="0">Гарантия</label>
               </li>
               <li class="tabs__item tabs__item--credit">
-                <label class="tabs__button tabs__button--credit button button--primary" for="tab-control-3">Кредит</label>
+                <label class="tabs__button tabs__button--credit button button--primary" for="tab-control-3" tabindex="0">Кредит</label>
               </li>
             </ul>
           </div>
@@ -268,7 +267,7 @@
         <section class="contacts">
           <h2 class="contacts__title">Контакты</h2>
           <p class="contacts__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-          <a class="contacts__map contacts-map">
+          <a href="https://goo.gl/maps/9dZvXqNTSrz" class="contacts__map contacts-map">
             <img class="contacts-map__img" src="img/map.jpg" width="560" height="222" alt="г. Москва, улица Строителей, д. 15">
           </a>
           <a href="#" class="button button--primary contacts__button">Напишите нам</a>
@@ -331,13 +330,12 @@
       </div>
     </footer>
     <section class="map">
-      <button class="button button--close" type="button"><span class="visually-hidden">Закрыть всплывающее окно</span></button>
       <h2 class="map__title visually-hidden">Карта</h2>
       <img class="map__img" src="img/map-big.jpg" width="960" height="559" alt="Наш офис на карте">
       <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7565.0908289150075!2d37.523254492690235!3d55.686989062919665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1531073566166" width="960" height="590" allowfullscreen></iframe>
+      <button class="button button--close" type="button"><span class="visually-hidden">Закрыть всплывающее окно</span></button>
     </section>
     <section class="modal write-us">
-      <button class="button button--close" type="button"><span class="visually-hidden">Закрыть всплывающее окно</span></button>
       <h2 class="write-us__title visually-hidden">Написать нам</h2>
       <form action="https://echo.htmlacademy.ru" class="write-us__form" method="post">
         <div class="form-field">
@@ -353,6 +351,7 @@
           <textarea id="message" class="textarea form-field__textarea" placeholder="В свободной форме" name="message"></textarea>
         </div>
         <button class="button button--primary button--submit write-us__button" type="submit">Отправить</button>
+        <button class="button button--close" type="button"><span class="visually-hidden">Закрыть всплывающее окно</span></button>
       </form>
     </section>
     <script src="js/script.min.js"></script>

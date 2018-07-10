@@ -7,7 +7,6 @@
     <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/gilroylight.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/gilroyextrabold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link href="css/normalize.min.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page">
@@ -47,7 +46,7 @@
                   <a href="#" class="catalog-menu__link">Виртуальная реальность</a>
                 </li>
                 <li class="catalog-menu__item">
-                  <a href="catalog.html" class="catalog-menu__link">Моноподы для селфи</a>
+                  <a class="catalog-menu__link catalog-menu__link--active">Моноподы для селфи</a>
                 </li>
                 <li class="catalog-menu__item">
                   <a href="#" class="catalog-menu__link">Экшн-камеры</a>
@@ -127,23 +126,23 @@
                 <ul class="filter__list list-unstyled">
                   <li class="filter__item checkbox">
                     <input id="filter-color-black" class="checkbox__input checkbox__input--filter visually-hidden" type="checkbox" name="color-filter" value="black" checked>
-                    <label class="checkbox__label checkbox__label--filter" for="filter-color-black">Черный</label>
+                    <label class="checkbox__label checkbox__label--filter" for="filter-color-black" tabindex="0">Черный</label>
                   </li>
                   <li class="filter__item checkbox">
                     <input id="filter-color-white" class="checkbox__input checkbox__input--filter visually-hidden" type="checkbox" name="color-filter" value="white">
-                    <label class="checkbox__label checkbox__label--filter" for="filter-color-white">Белый</label>
+                    <label class="checkbox__label checkbox__label--filter" for="filter-color-white" tabindex="0">Белый</label>
                   </li>
                   <li class="filter__item checkbox">
                     <input id="filter-color-blue" class="checkbox__input checkbox__input--filter visually-hidden" type="checkbox" name="color-filter" value="blue" checked>
-                    <label class="checkbox__label checkbox__label--filter" for="filter-color-blue">Синий</label>
+                    <label class="checkbox__label checkbox__label--filter" for="filter-color-blue" tabindex="0">Синий</label>
                   </li>
                   <li class="filter__item checkbox">
                     <input id="filter-color-red" class="checkbox__input checkbox__input--filter visually-hidden" type="checkbox" name="color-filter" value="red" checked>
-                    <label class="checkbox__label checkbox__label--filter" for="filter-color-red">Красный</label>
+                    <label class="checkbox__label checkbox__label--filter" for="filter-color-red" tabindex="0">Красный</label>
                   </li>
                   <li class="filter__item checkbox">
                     <input id="filter-color-ping" class="checkbox__input checkbox__input--filter visually-hidden" type="checkbox" name="color-filter" value="pink">
-                    <label class="checkbox__label checkbox__label--filter" for="filter-color-ping">Розовый</label>
+                    <label class="checkbox__label checkbox__label--filter" for="filter-color-ping" tabindex="0">Розовый</label>
                   </li>
                 </ul>
               </fieldset>
@@ -152,11 +151,11 @@
                 <ul class="filter__list list-unstyled">
                   <li class="filter__item radio">
                     <input id="available-bluetooth-true" class="radio__input radio__input--filter visually-hidden" type="radio" name="available-bluetooth" value="yes" checked>
-                    <label class="radio__label radio__label--filter" for="available-bluetooth-true">Есть</label>
+                    <label class="radio__label radio__label--filter" for="available-bluetooth-true" tabindex="0">Есть</label>
                   </li>
                   <li class="filter__item radio">
                     <input id="available-bluetooth-false" class="radio__input radio__input--filter visually-hidden" type="radio" name="available-bluetooth" value="no">
-                    <label class="radio__label radio__label--filter" for="available-bluetooth-false">Нет</label>
+                    <label class="radio__label radio__label--filter" for="available-bluetooth-false" tabindex="0">Нет</label>
                   </li>
                 </ul>
               </fieldset>

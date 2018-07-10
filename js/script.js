@@ -1,15 +1,27 @@
-var linkContacts = document.querySelector(".contacts__button");
+let linkContacts = document.querySelector(".contacts__button");
+let linkMap = document.querySelector(".contacts__map");
+let popupWriteUs = document.querySelector(".write-us");
+let popupMap = document.querySelector(".map");
 
-var popupWriteUs = document.querySelector(".write-us");
-var closePopupWriteUs = popupWriteUs.querySelector(".button--close");
+let closePopupWriteUs = popupWriteUs.querySelector(".button--close");
+let closePopupMap = popupMap.querySelector(".button--close");
 
-var formWriteUs = document.querySelector(".write-us__form");
-var nameUser = popupWriteUs.querySelector("[name=name]");
-var emailUser = popupWriteUs.querySelector("[name=email]");
-var messageUser = popupWriteUs.querySelector("[name=message]");
+let formWriteUs =  document.forms[1];
 
-var isStorageSupport = true;
-var storage = "";
+let nameUser = formWriteUs.querySelector("[name=name]");
+let emailUser = formWriteUs.querySelector("[name=email]");
+let messageUser = formWriteUs.querySelector("[name=message]");
+
+let isStorageSupport = true;
+let storage = "";
+
+let keyCode = {
+  ESC: 27
+}
+
+function supportPreventDefault(event) {
+  return event.preventDefault ? event.preventDefault() : (event.returnValue = false);
+}
 
 try {
   storage = localStorage.getItem("nameUser");
@@ -17,8 +29,8 @@ try {
   isStorageSupport = false;
 }
 
-linkContacts.addEventListener("click", function(e) {
-  e.preventDefault();
+linkContacts.addEventListener("click", function(event) {
+  supportPreventDefault(event)
   popupWriteUs.classList.add("modal--show");
   nameUser.focus();
   if (storage) {
@@ -29,15 +41,9 @@ linkContacts.addEventListener("click", function(e) {
   }
 });
 
-closePopupWriteUs.addEventListener("click", function(e) {
-  e.preventDefault();
-  popupWriteUs.classList.remove("modal--show");
-  popupWriteUs.classList.remove("modal--error");
-});
-
-formWriteUs.addEventListener("submit", function(e) {
+formWriteUs.addEventListener("submit", function(event) {
   if (!nameUser.value || !emailUser.value || !messageUser.value) {
-    e.preventDefault();
+    supportPreventDefault(event)
     popupWriteUs.classList.remove("modal--error");
     popupWriteUs.offsetWidth = popupWriteUs.offsetWidth;
     popupWriteUs.classList.add("modal--error");
@@ -48,36 +54,29 @@ formWriteUs.addEventListener("submit", function(e) {
   }
 });
 
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
-    if (popupWriteUs.classList.contains("modal--show")) {
-      popupWriteUs.classList.remove("modal--show");
-      popupWriteUs.classList.remove("modal--error");
-    }
-  }
+closePopupWriteUs.addEventListener("click", function(event) {
+  supportPreventDefault(event)
+  popupWriteUs.classList.remove("modal--show", "modal--error");
 });
 
-var linkMap = document.querySelector(".contacts__map");
-
-var popupMap = document.querySelector(".map");
-var closePopupMap = popupMap.querySelector(".button--close");
-
-linkMap.addEventListener("click", function(e) {
-  e.preventDefault();
+linkMap.addEventListener("click", function(event) {
+  supportPreventDefault(event)
   popupMap.classList.add("modal--show");
 });
 
-closePopupMap.addEventListener("click", function(e) {
-  e.preventDefault();
-  popupMap.classList.remove("modal--show");
-});
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
+window.addEventListener("keydown", function(event) {
+  if (event.keyCode === keyCode.ESC) {
+    supportPreventDefault(event)
+    if (popupWriteUs.classList.contains("modal--show")) {
+      popupWriteUs.classList.remove("modal--show", "modal--error");
+    }
     if (popupMap.classList.contains("modal--show")) {
       popupMap.classList.remove("modal--show");
     }
   }
+});
+
+closePopupMap.addEventListener("click", function(event) {
+  supportPreventDefault(event)
+  popupMap.classList.remove("modal--show");
 });
